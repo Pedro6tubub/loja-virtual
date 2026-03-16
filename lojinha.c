@@ -4,8 +4,10 @@
 
 int main() {
     char opcao;
-    int num, soma, p1=0, m1=0, g1=0, tamanho;
-    int p2=0, m2=0, g2=0; int p3=0, m3=0, g3=0;
+    int numero, soma, tamanho;
+    int p1=0, m1=0, g1=0;
+    int p2=0, m2=0, g2=0; 
+    int p3=0, m3=0, g3=0;
     int contador1 = 0, contador2 = 0, contador3 = 0;
     double total, mult1, mult2, mult3;
 
@@ -13,13 +15,13 @@ int main() {
         printf("//LOJA VIRTUAL KIDS MODA//\n");
         printf("DIGITE A ROUPA QUE DESEJA: \n");
         printf("[1] REGATA\n[2] BLUSAO\n[3] MACACAO\n");
-        scanf("%d", &num);
+        scanf("%d", &numero);
 
-        while (num < 1 || num > 3) {
+        while (numero < 1 || numero > 3) {
             printf("//NUMERO INVALIDO//\n");
             printf("DIGITE A ROUPA QUE DESEJA: \n");
             printf("[1] REGATA\n[2] BLUSAO\n[3] MACACAO\n");
-            scanf("%d", &num);
+            scanf("%d", &numero);
         }
         
         while(1){
@@ -27,7 +29,7 @@ int main() {
         	printf("[1]P\n[2]M\n[3]G\n");
         	scanf("%d", &tamanho);
         
-        	if (num==1){
+        	if (numero==1){
         		if (tamanho==1){
         			p1++;
 				}
@@ -38,7 +40,7 @@ int main() {
 					g1++;
 				}
 			}
-			else if (num==2){
+			else if (numero==2){
 				if (tamanho==1){
         			p2++;
 				}
@@ -49,7 +51,7 @@ int main() {
 					g2++;
 				}
 			}
-			else if (num==3){
+			else if (numero==3){
 				if (tamanho==1){
         			p3++;
 				}
@@ -65,9 +67,9 @@ int main() {
 			}
 		}
 		
-        if (num == 1) contador1++;
-        else if (num == 2) contador2++;
-        else if (num == 3) contador3++;
+        if (numero == 1) contador1++;
+        else if (numero == 2) contador2++;
+        else if (numero == 3) contador3++;
 
         printf("Deseja continuar escolhendo? (S/N): ");
         scanf(" %c", &opcao);
